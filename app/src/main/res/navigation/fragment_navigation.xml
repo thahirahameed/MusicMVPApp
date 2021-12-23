@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/classic_fragment">
+
+    <fragment
+        android:id="@+id/classic_fragment"
+        android:name="com.thahira.example.musicmvpapp.views.ClassicFragment"
+        android:label="Classic Songs">
+
+        <action android:id="@+id/from_classic_fragment_to_rock_fragment"
+            app:destination="@+id/rock_fragment"></action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/rock_fragment"
+        android:name="com.thahira.example.musicmvpapp.views.RockFragment"
+        android:label="Rock Songs">
+
+        <action android:id="@+id/from_rock_fragment_to_pop_fragment"
+            app:destination="@+id/pop_fragment"></action>
+
+    </fragment>
+
+   <fragment
+       android:id="@+id/pop_fragment"
+       android:name="com.thahira.example.musicmvpapp.views.PopFragment"
+       android:label="Pop Songs">
+
+   </fragment>
+
+</navigation>

@@ -1,0 +1,58 @@
+package com.thahira.example.musicmvpapp.rest
+
+import com.thahira.example.musicmvpapp.model.classic.ClassicTracks
+import com.thahira.example.musicmvpapp.model.classic.Result
+import com.thahira.example.musicmvpapp.model.pop.PopTracks
+import com.thahira.example.musicmvpapp.model.rock.RockTracks
+import io.reactivex.Single
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+
+interface MusicApi {
+
+    //This will retrieve all the music details from Music
+
+    @GET(SEARCH)
+    fun retrieveClassic(
+     //   @Query("term")term:String,
+        @Query("amp;media")media:String = MEDIA_TYPE,
+        @Query("amp;entity")entity:String = ENTITY_TYPE,
+        @Query("amp;limit")limit:String = LIMIT_50
+
+    ): Single<ClassicTracks>
+
+    @GET(SEARCH)
+    fun retrieveRock(
+     //   @Query("term")term:String,
+        @Query("amp;media")media:String = MEDIA_TYPE,
+        @Query("amp;entity")entity:String = ENTITY_TYPE,
+        @Query("amp;limit")limit:String = LIMIT_50
+
+    ): Single<RockTracks>
+
+    @GET(SEARCH)
+    fun retrievePop(
+      //  @Query("term")term:String,
+        @Query("amp;media")media:String = MEDIA_TYPE,
+        @Query("amp;entity")entity:String = ENTITY_TYPE,
+        @Query("amp;limit")limit:String = LIMIT_50
+
+    ): Single<PopTracks>
+
+
+    companion object{
+
+        const val BASE_URL ="https://itunes.apple.com/"
+
+        private const val SEARCH ="search"
+
+        const val MEDIA_TYPE ="music"
+        const val ENTITY_TYPE ="song"
+        const val LIMIT_50 ="50"
+
+        const val MUSIC_CLASSIC ="classic"
+        const val MUSIC_ROCK ="rock"
+        const val MUSIC_POP ="pop"
+    }
+}
