@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.thahira.example.musicmvpapp.R
-import com.thahira.example.musicmvpapp.model.classic.Result
+import com.thahira.example.musicmvpapp.model.Result
 
 class ClassicAdapter(
     private val previewClick: PreviewClick,

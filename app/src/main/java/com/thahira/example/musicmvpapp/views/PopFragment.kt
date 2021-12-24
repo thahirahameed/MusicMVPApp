@@ -14,9 +14,9 @@ import com.thahira.example.musicmvpapp.MusicApplication
 import com.thahira.example.musicmvpapp.adapters.PopAdapter
 import com.thahira.example.musicmvpapp.adapters.PreviewClick
 import com.thahira.example.musicmvpapp.databinding.FragmentPopBinding
+import com.thahira.example.musicmvpapp.model.Result
 import com.thahira.example.musicmvpapp.presenters.IPopView
 import com.thahira.example.musicmvpapp.presenters.PopPresenter
-import com.thahira.example.musicmvpapp.model.pop.Result
 
 import javax.inject.Inject
 

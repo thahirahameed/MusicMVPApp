@@ -3,8 +3,7 @@ package com.thahira.example.musicmvpapp.presenters
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import com.thahira.example.musicmvpapp.database.ResultDatabase
-import com.thahira.example.musicmvpapp.model.rock.Result
-import com.thahira.example.musicmvpapp.model.rock.RockTracks
+import com.thahira.example.musicmvpapp.model.Result
 import com.thahira.example.musicmvpapp.rest.MusicApi
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

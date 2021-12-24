@@ -3,16 +3,17 @@ package com.thahira.example.musicmvpapp.presenters
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import com.thahira.example.musicmvpapp.database.ResultDatabase
-import com.thahira.example.musicmvpapp.model.pop.Result
+import com.thahira.example.musicmvpapp.model.Result
 import com.thahira.example.musicmvpapp.rest.MusicApi
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class PopPresenter @Inject constructor(var networkApi: MusicApi,
-                                       var connectivityManager: ConnectivityManager,
-                                       var resultDatabase: ResultDatabase
+class PopPresenter @Inject constructor(
+    var networkApi: MusicApi,
+    var connectivityManager: ConnectivityManager,
+    var resultDatabase: ResultDatabase
 ): IPopPresenter{
 
     private var popViewContract : IPopView? = null

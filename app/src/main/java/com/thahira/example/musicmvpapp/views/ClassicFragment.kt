@@ -11,22 +11,19 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.thahira.example.musicmvpapp.MusicApplication
-import com.thahira.example.musicmvpapp.R
 import com.thahira.example.musicmvpapp.adapters.ClassicAdapter
-import com.thahira.example.musicmvpapp.adapters.FragmentsAdapter
 import com.thahira.example.musicmvpapp.adapters.PreviewClick
 import com.thahira.example.musicmvpapp.databinding.FragmentClassicBinding
-import com.thahira.example.musicmvpapp.model.classic.Result
+import com.thahira.example.musicmvpapp.model.Result
 import com.thahira.example.musicmvpapp.presenters.ClassicPresenter
 import com.thahira.example.musicmvpapp.presenters.IClassicView
 
 import javax.inject.Inject
 
 
-class ClassicFragment: Fragment(),IClassicView,PreviewClick {
+class ClassicFragment: Fragment(), IClassicView, PreviewClick {
 
-    @Inject
-    lateinit var presenter : ClassicPresenter
+    @Inject lateinit var presenter : ClassicPresenter
 
     private lateinit var binding: FragmentClassicBinding
     private var classicAdapter = ClassicAdapter(this)

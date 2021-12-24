@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.thahira.example.musicmvpapp.R
-import com.thahira.example.musicmvpapp.model.rock.Result
+import com.thahira.example.musicmvpapp.model.Result
 
 class RockAdapter(
     private val previewClick: PreviewClick,

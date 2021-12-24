@@ -1,9 +1,6 @@
 package com.thahira.example.musicmvpapp.rest
 
-import com.thahira.example.musicmvpapp.model.classic.ClassicTracks
-import com.thahira.example.musicmvpapp.model.classic.Result
-import com.thahira.example.musicmvpapp.model.pop.PopTracks
-import com.thahira.example.musicmvpapp.model.rock.RockTracks
+import com.thahira.example.musicmvpapp.model.Tracks
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -15,30 +12,30 @@ interface MusicApi {
 
     @GET(SEARCH)
     fun retrieveClassic(
-     //   @Query("term")term:String,
+        @Query("term") term:String = MUSIC_CLASSIC,
         @Query("amp;media")media:String = MEDIA_TYPE,
         @Query("amp;entity")entity:String = ENTITY_TYPE,
         @Query("amp;limit")limit:String = LIMIT_50
 
-    ): Single<ClassicTracks>
+    ): Single<Tracks>
 
     @GET(SEARCH)
     fun retrieveRock(
-     //   @Query("term")term:String,
+        @Query("term")term:String = MUSIC_ROCK,
         @Query("amp;media")media:String = MEDIA_TYPE,
         @Query("amp;entity")entity:String = ENTITY_TYPE,
         @Query("amp;limit")limit:String = LIMIT_50
 
-    ): Single<RockTracks>
+    ): Single<Tracks>
 
     @GET(SEARCH)
     fun retrievePop(
-      //  @Query("term")term:String,
+        @Query("term")term:String = MUSIC_POP,
         @Query("amp;media")media:String = MEDIA_TYPE,
         @Query("amp;entity")entity:String = ENTITY_TYPE,
         @Query("amp;limit")limit:String = LIMIT_50
 
-    ): Single<PopTracks>
+    ): Single<Tracks>
 
 
     companion object{

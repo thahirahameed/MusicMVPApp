@@ -1,8 +1,14 @@
-package com.thahira.example.musicmvpapp.model.classic
+package com.thahira.example.musicmvpapp.model
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Remember for Room database you need the DAO, Entity and DATABASE annotations
+ */
+@Entity
 data class Result(
     @SerializedName("artistId")
     val artistId: Int,
@@ -72,6 +78,7 @@ data class Result(
     val trackHdPrice: Double,
     @SerializedName("trackHdRentalPrice")
     val trackHdRentalPrice: Double,
+    @PrimaryKey
     @SerializedName("trackId")
     val trackId: Int,
     @SerializedName("trackName")
