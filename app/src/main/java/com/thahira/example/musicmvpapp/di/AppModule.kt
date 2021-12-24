@@ -25,11 +25,11 @@ class AppModule(private val application: Application) {
 
     @Provides
     @Singleton
-    fun provideResultDatabase(context: Context) : ResultDatabase{
+    fun provideResultDatabase(context: Context): ResultDatabase{
         return Room.databaseBuilder(
             context,
-            ResultDatabase:: class.java,
-            "Songs-DB"
+            ResultDatabase::class.java,
+            "songs-db"
         ).build()
     }
 }

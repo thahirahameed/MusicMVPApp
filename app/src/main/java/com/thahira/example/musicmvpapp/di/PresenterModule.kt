@@ -12,19 +12,28 @@ import javax.inject.Singleton
 class PresenterModule {
 
     @Provides
-    fun provideRockPresenter(musicApi: MusicApi, connectivityManager: ConnectivityManager,resultDatabase: ResultDatabase
+    fun provideRockPresenter(
+        musicApi: MusicApi,
+        connectivityManager: ConnectivityManager,
+        resultDatabase: ResultDatabase
     ): IRockPresenter {
         return RockPresenter(musicApi,connectivityManager,resultDatabase)
     }
 
     @Provides
-    fun provideClassicPresenter(musicApi: MusicApi, connectivityManager: ConnectivityManager,resultDatabase: ResultDatabase
+    fun provideClassicPresenter(
+        musicApi: MusicApi,
+        connectivityManager: ConnectivityManager,
+        resultDatabase: ResultDatabase
     ): IClassicPresenter {
         return ClassicPresenter(musicApi,connectivityManager,resultDatabase)
     }
 
     @Provides
-    fun providePopPresenter(musicApi: MusicApi, connectivityManager: ConnectivityManager,resultDatabase: ResultDatabase
+    fun providePopPresenter(
+        musicApi: MusicApi,
+        connectivityManager: ConnectivityManager,
+        resultDatabase: ResultDatabase
     ): IPopPresenter {
         return PopPresenter(musicApi,connectivityManager,resultDatabase)
     }

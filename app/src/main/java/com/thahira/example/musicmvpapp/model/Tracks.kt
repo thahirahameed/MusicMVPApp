@@ -1,9 +1,9 @@
-package com.thahira.example.musicmvpapp.model.rock
+package com.thahira.example.musicmvpapp.model
 
 
 import com.google.gson.annotations.SerializedName
 
-data class RockTracks(
+data class Tracks(
     @SerializedName("resultCount")
     val resultCount: Int,
     @SerializedName("results")

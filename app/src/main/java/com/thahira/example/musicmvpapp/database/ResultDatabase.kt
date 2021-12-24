@@ -2,8 +2,9 @@ package com.thahira.example.musicmvpapp.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.thahira.example.musicmvpapp.model.Result
 
 @Database(entities = [Result::class], version = 1)
-abstract class ResultDatabase : RoomDatabase(){
-    abstract fun getResultDao():ResultDao
+abstract class ResultDatabase : RoomDatabase() {
+    abstract fun getResultDao(): ResultDao
 }

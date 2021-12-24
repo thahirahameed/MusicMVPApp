@@ -14,7 +14,7 @@ import com.thahira.example.musicmvpapp.MusicApplication
 import com.thahira.example.musicmvpapp.adapters.PreviewClick
 import com.thahira.example.musicmvpapp.adapters.RockAdapter
 import com.thahira.example.musicmvpapp.databinding.FragmentRockBinding
-import com.thahira.example.musicmvpapp.model.rock.Result
+import com.thahira.example.musicmvpapp.model.Result
 import com.thahira.example.musicmvpapp.presenters.IRockView
 import com.thahira.example.musicmvpapp.presenters.RockPresenter
 import javax.inject.Inject
@@ -23,6 +23,7 @@ class RockFragment : Fragment(), IRockView, PreviewClick {
 
     // Injecting our presenter
     @Inject lateinit var presenter : RockPresenter
+
     private lateinit var binding : FragmentRockBinding
     private lateinit var rockAdapter : RockAdapter
 

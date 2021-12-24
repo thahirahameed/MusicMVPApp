@@ -12,8 +12,6 @@ import javax.inject.Singleton
     NetworkModule::class,
     PresenterModule::class
 ])
-
-
 @Singleton
 interface MusicComponent {
     fun inject(mainActivity: MainActivity)
